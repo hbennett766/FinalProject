@@ -19,3 +19,13 @@ class Task():
       self.created = time.time()
       self.due_date= dueDate
       self.completed = None 
+
+  def __str__(self):
+     name = self.name
+     priority = self.priority
+     unique_id = self.unique_id
+     created = self.created
+     due_date = self.due_date
+     completed = self.completed
+     string = f"{name}\n {priority}\n {unique_id}\n"
+     return string

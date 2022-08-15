@@ -1,5 +1,5 @@
 import argparse
-import pickle 
+import pickle  
 import uuid
 import tasks
 import task
@@ -24,19 +24,18 @@ new_tasks_instance = tasks.Tasks()
 if args.add:
 
     if (args.add).replace(" ", "").isalpha():
-        print(f"add {args.add} with priority of {args.priority} and due date {args.due}")
+        #print(f"add {args.add} with priority of {args.priority} and due date {args.due}")
         create_task = task.Task(args.add, args.priority, args.due)
         new_task = new_tasks_instance.add(create_task)
-        print(f"Created task {new_task}")
+        #print(f"Created task {new_task}")
         new_tasks_instance.pickle_tasks()
 
     else:
-        print(f"There was an error in creating your task. Run 'todo -h' for usage instructions.")
+        print("There was an error in creating your task. Run 'todo -h' for usage instructions.")
 elif args.list:
     list = new_tasks_instance.list()
-    print(list)
-    #os.remove(PICKLE_FILE)
-#do something with the data
+
+
 
 exit()
 
