@@ -50,8 +50,8 @@ class Tasks:
         #order data before tabulating 
         #first by due date
         #then by priority
-        data = sorted(data, key=itemgetter(2))
         data = sorted(data, key=itemgetter(3))
+        data = sorted(data, key=itemgetter(2))
         print (tabulate(data, headers=["ID", "Age", "Due Date", "Priority", "Task"]))
 
     def report(self):
